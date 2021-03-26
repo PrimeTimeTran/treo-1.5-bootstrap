@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Montserrat:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@600&display=swap');
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header-section__navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:  #15182A;
+    font-family: "Poppins", sans-serif;
+}
+
+
+nav.header-section__navbar {
+    z-index: 100;
+}
+
+
+
+.logo {
+    color: rgb(226, 226, 226);
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Architects Daughter';
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 1s ease-in    ;
+}
+
+.nav-links a:hover {
+    color:  #1abc9c;
+    text-decoration: none;
+}
+
+.nav-links a:active {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        z-index: 5;
+        position: fixed;
+        right: 0px;
+        height: 30vh;
+        top: 8vh;
+        background-color: #15182A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        
+    }
+    
+    .nav-links a:hover {
+        color:  #1abc9c;
+        text-decoration: none;
+    }
+    
+
+    .nav-links li a:active {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+.nav-1{ 
+    transform: translateX(0%);
+}
+
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#about{
+  z-index: -1;
+}
+
+.hero-section{
+    left: 0;
+    right: 0;
+    background-image: url('./assets/span.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 300px;
+    color: white;
+    padding-bottom: 300px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-style: italic;
+}
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.hero-button {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.profile-img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    z-index: -100;
+}
+
+.img-avatar{
+    text-align: center;
+    z-index: -10;
+}
+
+
+.profile-information{
+    z-index: -10;
+}
+
+
+.section-title{
+    z-index: -1000;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.mt-10{
+    margin-top: 30px;
+}
+
+.flex-r{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+.text-center {
+    text-align: center!important;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+.section-subheading {
+    margin-bottom: 4rem;
+}
+
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #6c757d;
+    border-radius: .25rem;
+}
+
+
+.card:hover {
+    background-color:   #1abc9c;
+    transform: scale(1.1);
+    transition: 0.57s  ease-out;
+    box-shadow: 0 3px 5px rgba(0,0,0,.125)
+}
+
+
+.card:active{
+    transform: scale(1.08);
+    transition: 0.25s;
+    opacity: .9;
+}
+
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.card img {
+    vertical-align: middle;
+    border-style: none;
+    z-index: 1
+    ;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    
+    
+}
+
+.portfolio-body {
+    text-align: center;
+}
+
+.portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+
+
+.contact-text {
+	text-align: center;
+}
+
+.contact-form {
+	padding: 20px;
+	margin: 20px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.button-submit{
+  width: 100%;
+  background:   #1abc9c;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px #CCC;
+}
+
+.button-submit:hover{
+  opacity: 0.8;
+}
+button-submit:active{
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+
+.icon-style {
+	font-weight: 800;
+	font-size: 128px;
+	color: #1abc9c;
+}
+
+.section-padding{
+  padding: 0 6rem;
+}
+
+.experience-date {
+	color:  #1abc9c;
+	font-weight: bold;
+}
+
+.experience-row {
+    padding: 2rem;
+}
+
+.footer{
+  background: #1abc9c;
+}
+
+.py-4 {
+    padding-bottom: 1.5rem!important;
+    padding-top:  1.5rem!important;
+}
+
+.text-right {
+    text-align: right!important;
+}
+
+.modal-pic {
+    width: 100%;
+}
+
+body, html{
+  height: 100%;
+}
+
+#page-content{
+  flex: 1 auto 0;
+}
+
+
+#sticky-footer{
+  flex-shrink: none;
+}
+
